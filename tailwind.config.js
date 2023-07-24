@@ -2,7 +2,15 @@
 export default {
   content: ['./index.html', 'src/**/*.{ts,tsx}'],
   theme: {
-    extend: {},
+    debugScreens: { position: ['top', 'left'] },
+    extend: {
+      colors: {
+        mainColor: '#212f49',
+      },
+      fontFamily: {
+        headline: ['Oswald'],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-debug-screens')],
 };
